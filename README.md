@@ -85,6 +85,6 @@ resource "yandex_compute_instance" "storage" {
 Ошибка:
 > Call to function "templatefile" failed: ./hosts.tftpl:24,85-86: Invalid character; This character is not used within the language., and 1 other diagnostic(s).
 
-Открыла файл в текстовом редакторе Sublime Text, он показал, что искомые символы это **=${**. Судя по всему, дело в лишней фигурной скобке в конце строки. И ещё в незакрытой скобке после ```"nat_ip_address"```
+Открыла файл в текстовом редакторе Sublime Text, он показал, что искомые символы это **=${**. Судя по всему, дело в лишней фигурной скобке в конце строки. И ещё в незакрытой фигурной скобке после ```"nat_ip_address"```, а также виноват лишний пробел в "provider_id ". 
 После этого ```terraform apply``` удался. В hosts.cfg:
 > [webservers]web-1 ansible_host=84.252.129.74 platform_id=standard-v3web-2 ansible_host=84.252.131.240 platform_id=standard-v3
