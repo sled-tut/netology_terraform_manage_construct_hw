@@ -80,3 +80,9 @@ resource "yandex_compute_instance" "storage" {
 ![](/images/task4_2.png)
 
 Код проекта залила в ветку **terraform-03**.
+
+# Задание 8*
+Ошибка:
+> Call to function "templatefile" failed: ./hosts.tftpl:24,85-86: Invalid character; This character is not used within the language., and 1 other diagnostic(s).
+
+Открыла файл в текстовом редакторе Sublime Text, он показал, что искомые символы это **=${**. Судя по всему, дело в лишней фигурной скобке в конце строки. И ещё в незакрытой скобке после ```"nat_ip_address"```
