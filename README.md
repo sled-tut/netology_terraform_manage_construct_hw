@@ -74,6 +74,7 @@ resource "yandex_compute_instance" "storage" {
 # Задание 4
 Все ВМ и диски успешно созданы:
 ![](/images/task4_1.png)
+![](/images/task4_3.png)
 
 Содержимое файла ```hosts.cfg```:
 ![](/images/task4_2.png)
